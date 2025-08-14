@@ -13,7 +13,7 @@ SOURCE_DIR="$1"
 OUTPUT_DIR="$2"
 TMP_DIR="$OUTPUT_DIR/tmp"
 ZIP_BASENAME="archive"
-ZIP_SPLIT_SIZE=1440000  # Slightly under 1.44MB for FAT overhead
+ZIP_SPLIT_SIZE=1400000  # Slightly under 1.44MB for FAT overhead
 
 # Ensure required tools exist
 for cmd in zip mkfs.vfat mcopy; do
@@ -64,7 +64,7 @@ for PART_FILE in "${PART_FILES[@]}"; do
 
     mkfs.vfat -C "$IMG_NAME" 1440 > /dev/null
     if ! MTOOLS_SKIP_CHECK=1 mcopy -i "$IMG_NAME" "$PART_FILE" ::; then
-        echo "    ⚠️  Warning: Failed to copy $PART_FILE (check for 8.3 filename issue)"
+        echo "     Warning: Failed to copy $PART_FILE (check for 8.3 filename issue)"
     fi
 
     ((PART_NUM++))
@@ -73,4 +73,4 @@ done
 # Re-enable exit on error
 set -e
 
-echo "[✓] Created $PART_NUM floppy disk images in $OUTPUT_DIR."
+echo "[v] Created $PART_NUM floppy disk images in $OUTPUT_DIR."
