@@ -7,4 +7,5 @@
 Usage: `./floppy-image-archive.sh <source directory> <destination directory>`
 
 `<source directory>` the location of your directory containing files for archive
+
 `<destination directory>` the loation of your set of floppy images to be created
