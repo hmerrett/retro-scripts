@@ -2,7 +2,7 @@
 
 ## Useful scripts for retro computing.
 
-### floppy-image-archive.sh - a quick and easy way to archive a local folder to floppy images readable by a DOS pc and PKWARE-2.04G
+### floppy-image-archive.sh - a quick and easy way to archive a local folder to floppy images readable by a DOS pc and arj
 
 Usage: `./floppy-image-archive.sh <source directory> <destination directory>`
 
