@@ -1,10 +1,8 @@
-# Silly scripts
+# Useful scripts for retro computing.
 
-## Useful scripts for retro computing.
+## floppy-image-archive.sh 
 
-### floppy-image-archive.sh 
-
-#### a quick and easy way to archive a local folder to floppy images readable by a DOS pc and arj
+### a quick and easy way to archive a local folder to floppy images readable by a DOS pc and arj
 
 Usage: `./floppy-image-archive.sh <source directory> <destination directory>`
 
@@ -14,9 +12,9 @@ Usage: `./floppy-image-archive.sh <source directory> <destination directory>`
 
 Dependencies (assuming Ubuntu): `sudo apt install arj mtools dosfstools`
 
-### make-floppy.sh
+## make-floppy.sh
 
-#### put all the files in the current directory into a fat 12 floppy image
+### put all the files in the current directory into a fat 12 floppy image
 
 Usage: `./make-floppy.sh [--size=1.44|--size=720k]`
 
