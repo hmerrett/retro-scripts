@@ -35,7 +35,8 @@ for tool in mkfs.fat mcopy df truncate stat find; do
 done
 
 # Check free space
-AVAIL_BYTES=$(df -P . | awk 'NR==2 {print $4 * 1024}')
+#AVAIL_BYTES=$(df -P . | awk 'NR==2 {print $4 * 1024}')
+AVAIL_BYTES=$(df -B1 --output=avail . | tail -1)
 if [ "$AVAIL_BYTES" -lt "$IMAGE_SIZE" ]; then
     echo "Error: Not enough free space on filesystem to create floppy image."
     exit 1
